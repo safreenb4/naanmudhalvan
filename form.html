@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="form.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+         // Function to generate a random color in hexadecimal format
+   function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 12)];
+    }
+    return color;
+  }
+
+  // Function to change the background color
+  function changeBackgroundColor() {
+    document.body.style.backgroundColor = getRandomColor();
+  }
+
+  // Set an interval to change the background color every 3 seconds (3000 milliseconds)
+  setInterval(changeBackgroundColor, 200);
+      </script>
+
+
+    <center><h1>Employee form</h1></center><br><br>
+    <center><form>
+<div class="top">
+<label>Enter Your Name:</label>
+<input type="text" id="name"><br><br><br>
+<lable>Enter your Department:</lable>
+<input type="text" id="dep"><br><br><br>
+<label>Tell us a little about Yourself:</label>
+<textarea>
+</textarea><br><br><br>
+<label>Do you exercise at home?</label>
+<input type="radio" value="Yes">
+<label>Yes</label>
+<input type="radio" value="No">
+<label>No</label><br><br><br>
+
+<label>How do you like to read about your favorite topics?</label><br><br><br>
+<input type="checkbox" value="books">
+<label>Books</label>
+<input type="checkbox" value="books">
+<label>Online Resources</label>
+<input type="checkbox" value="books">
+<label>Phone apps</label>
+<input type="checkbox" value="books">
+<label>Magazines</label><br><br><br>
+
+<label>What genre of movies do you like?</label>
+<select>
+    <option>Comedy</option>
+    <option>Action</option>
+    <option>Adventure</option>
+    <option>Horror</option>
+</select><br><br><br>
+</div>
+<div class="down">
+<input style="font-size: 20px;" type="submit" value="Submit Form">
+</div>
+</form></center>  
+</body>
+</html>
